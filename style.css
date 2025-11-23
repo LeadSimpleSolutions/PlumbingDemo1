@@ -137,25 +137,33 @@ blockquote cite{display:block;margin-top:8px;color:var(--muted);font-size:0.9rem
   box-shadow:0 12px 30px rgba(0,40,60,0.12);
 }
 .service-icon{font-size:2.2rem;margin-bottom:14px;color:var(--brand)}
-/* --- TESTIMONIAL CAROUSEL --- */
+/* --- CLEAN TESTIMONIAL CAROUSEL --- */
+
 .testimonial-carousel {
   position: relative;
-  overflow: hidden;
+  width: 100%;
   max-width: 700px;
   margin: 0 auto;
+  overflow: hidden;
+  padding: 0;
 }
 
 .testimonial-track {
   display: flex;
+  width: 100%;
   transition: transform 0.5s ease;
 }
 
 .testimonial-track blockquote {
-  min-width: 100%;
+  width: 100%;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  margin: 0;
   background: var(--card-bg);
-  padding: 20px;
+  padding: 24px 20px;
   border-radius: 12px;
   box-shadow: var(--shadow);
+  border-left: none !important;
 }
 
 .t-prev,
@@ -171,6 +179,7 @@ blockquote cite{display:block;margin-top:8px;color:var(--muted);font-size:0.9rem
   cursor: pointer;
   font-size: 20px;
   opacity: 0.9;
+  z-index: 10;
 }
 
 .t-prev:hover,
@@ -178,49 +187,18 @@ blockquote cite{display:block;margin-top:8px;color:var(--muted);font-size:0.9rem
   opacity: 1;
 }
 
-.t-prev { left: -50px; }
-.t-next { right: -50px; }
+.t-prev { left: 10px; }
+.t-next { right: 10px; }
 
-@media(max-width: 600px){
-  .t-prev { left: 10px; }
-  .t-next { right: 10px; }
-}
-/* FIX TESTIMONIAL CAROUSEL CONFLICTS */
-.section-light .wrap .testimonial-carousel {
-  width: 100%;
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-.section-light .wrap .testimonial-carousel blockquote {
-  border-left: none !important;
-  padding: 20px !important;
-}
-
-/* Disable old testimonial grid style */
+/* Remove old testimonials grid if still applied */
 .testimonials {
   display: block !important;
 }
 
-/* Ensure the slider stays centered */
-.testimonial-carousel {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  overflow: hidden;
-}
-
-/* Ensure slides don't shrink and stay full width */
-.testimonial-track blockquote {
-  flex-shrink: 0;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-/* Mobile center fix */
-@media(max-width: 600px){
+/* Mobile layout fix */
+@media (max-width: 600px) {
   .testimonial-carousel {
-    padding: 0 20px;
+    padding: 0 10px;
   }
 }
+
