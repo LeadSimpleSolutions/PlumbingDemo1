@@ -197,4 +197,30 @@ input,select,textarea{
     padding: 0 10px;
   }
 }
+/* Move arrows OUTSIDE the testimonial card */
+.t-prev,
+.t-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--brand);
+  color: #fff;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 20px;
+  opacity: 0.9;
+  z-index: 20;
+}
+
+/* Keep arrows clearly outside the text area */
+.t-prev { left: -25px; }
+.t-next { right: -25px; }
+
+/* On small screens, bring them in closer so they don’t push off-screen */
+@media(max-width: 600px){
+  .t-prev { left: 5px; }
+  .t-next { right: 5px; }
+}
 
