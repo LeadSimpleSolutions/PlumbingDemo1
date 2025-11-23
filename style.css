@@ -137,3 +137,51 @@ blockquote cite{display:block;margin-top:8px;color:var(--muted);font-size:0.9rem
   box-shadow:0 12px 30px rgba(0,40,60,0.12);
 }
 .service-icon{font-size:2.2rem;margin-bottom:14px;color:var(--brand)}
+/* --- TESTIMONIAL CAROUSEL --- */
+.testimonial-carousel {
+  position: relative;
+  overflow: hidden;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.testimonial-track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.testimonial-track blockquote {
+  min-width: 100%;
+  background: var(--card-bg);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+}
+
+.t-prev,
+.t-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--brand);
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 20px;
+  opacity: 0.9;
+}
+
+.t-prev:hover,
+.t-next:hover {
+  opacity: 1;
+}
+
+.t-prev { left: -50px; }
+.t-next { right: -50px; }
+
+@media(max-width: 600px){
+  .t-prev { left: 10px; }
+  .t-next { right: 10px; }
+}
