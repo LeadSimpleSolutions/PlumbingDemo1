@@ -185,3 +185,42 @@ blockquote cite{display:block;margin-top:8px;color:var(--muted);font-size:0.9rem
   .t-prev { left: 10px; }
   .t-next { right: 10px; }
 }
+/* FIX TESTIMONIAL CAROUSEL CONFLICTS */
+.section-light .wrap .testimonial-carousel {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.section-light .wrap .testimonial-carousel blockquote {
+  border-left: none !important;
+  padding: 20px !important;
+}
+
+/* Disable old testimonial grid style */
+.testimonials {
+  display: block !important;
+}
+
+/* Ensure the slider stays centered */
+.testimonial-carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Ensure slides don't shrink and stay full width */
+.testimonial-track blockquote {
+  flex-shrink: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Mobile center fix */
+@media(max-width: 600px){
+  .testimonial-carousel {
+    padding: 0 20px;
+  }
+}
