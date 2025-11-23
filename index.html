@@ -129,16 +129,27 @@
     <section class="section-light">
       <div class="wrap">
         <h2 class="section-title">What Customers Say</h2>
-        <div class="testimonials">
-          <blockquote>
-            <p>"Super fast and friendly — fixed our leaking pipe in under an hour!"</p>
-            <cite>— Jamie R.</cite>
-          </blockquote>
-          <blockquote>
-            <p>"Transparent pricing and excellent service. Highly recommend."</p>
-            <cite>— Mark L.</cite>
-          </blockquote>
-        </div>
+        <div class="testimonial-carousel">
+  <div class="testimonial-track">
+    <blockquote>
+      <p>"Super fast and friendly — fixed our leaking pipe in under an hour!"</p>
+      <cite>— Jamie R.</cite>
+    </blockquote>
+
+    <blockquote>
+      <p>"Transparent pricing and excellent service. Highly recommend."</p>
+      <cite>— Mark L.</cite>
+    </blockquote>
+
+    <blockquote>
+      <p>"They repaired my water heater the same day. Outstanding service!"</p>
+      <cite>— Sarah K.</cite>
+    </blockquote>
+  </div>
+
+  <button class="t-prev">❮</button>
+  <button class="t-next">❯</button>
+</div>
       </div>
     </section>
 
@@ -180,5 +191,22 @@
       </div>
     </div>
   </footer>
+  <script>
+let index = 0;
+const track = document.querySelector(".testimonial-track");
+const slides = document.querySelectorAll(".testimonial-track blockquote");
+const total = slides.length;
+
+document.querySelector(".t-next").onclick = () => {
+  index = (index + 1) % total;
+  track.style.transform = `translateX(-${index * 100}%)`;
+};
+
+document.querySelector(".t-prev").onclick = () => {
+  index = (index - 1 + total) % total;
+  track.style.transform = `translateX(-${index * 100}%)`;
+};
+</script>
+
 </body>
 </html>
