@@ -164,3 +164,33 @@ html,body{max-width:100%;overflow-x:hidden}
     top: 65% !important;
   }
 }
+/* --- FIX 1: Center testimonials on desktop again --- */
+.testimonial-carousel {
+  max-width: 700px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.t-viewport .testimonial-track blockquote {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* --- FIX 2: Proper mobile arrow alignment (no more giant merged arrow) --- */
+@media (max-width: 600px) {
+  .t-prev {
+    left: 10px !important;
+    right: auto !important;
+  }
+
+  .t-next {
+    right: 10px !important;
+    left: auto !important;
+  }
+
+  /* Optional: keep arrows safely below the text */
+  .t-prev,
+  .t-next {
+    top: 58% !important;
+  }
+}
