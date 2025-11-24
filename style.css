@@ -287,5 +287,15 @@ input,select,textarea{
     width: 70px;
   }
 }
+@media (max-width: 600px) {
+  .testimonial-carousel {
+    overflow: hidden;
+  }
+
+  .t-prev, .t-next {
+    left: 4px !important;
+    right: 4px !important;
+  }
+}
 
 
