@@ -297,5 +297,33 @@ input,select,textarea{
     right: 4px !important;
   }
 }
+/* GLOBAL HARD STOP — prevents any sideways scrolling */
+html, body {
+  max-width: 100% !important;
+  overflow-x: hidden !important;
+}
+/* Prevent header from ever exceeding screen width */
+.header-grid,
+.main-nav {
+  flex-wrap: wrap !important;
+  max-width: 100% !important;
+}
+.testimonial-carousel {
+  padding: 0 40px; /* desktop safe */
+  box-sizing: border-box;
+  max-width: 100% !important;  /* ← critical */
+}
+
+@media (max-width: 820px) {
+  .testimonial-carousel {
+    padding: 0 20px !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .testimonial-carousel {
+    padding: 0 10px !important;
+  }
+}
 
 
