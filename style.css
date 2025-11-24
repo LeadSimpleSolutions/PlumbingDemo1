@@ -93,10 +93,31 @@ input,select,textarea{
 .service-row.reverse{flex-direction:row-reverse}
 .service-thumb{width:220px;height:140px;object-fit:cover;border-radius:10px}
 
-/* ABOUT */
-.about-grid{display:grid;grid-template-columns:1fr 360px;gap:26px;align-items:start}
-.rounded-img{width:100%;border-radius:10px;object-fit:cover}
-.small-card{background:var(--card-bg);padding:14px;border-radius:10px;margin-top:12px}
+/* ABOUT — FIXED TO MATCH LANDSCAPING SITE */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 26px;
+  align-items: start;
+  margin-top: 10px;
+}
+
+/* Main content card */
+.about-card {
+  background: var(--card-bg);
+  padding: 22px;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+}
+
+/* Right-side card */
+.small-card {
+  background: var(--card-bg);
+  padding: 18px;
+  border-radius: 12px;
+  margin-top: 12px;
+  box-shadow: var(--shadow);
+}
 
 /* CONTACT */
 .contact-grid{display:grid;grid-template-columns:1fr 380px;gap:24px;align-items:start}
